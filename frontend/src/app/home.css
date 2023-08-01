@@ -1,0 +1,46 @@
+root {
+    --font-color-grey : #ABB2BF;
+}
+body {
+    max-width: 1440px;
+    margin: auto;
+    max-height: 1080px;
+    background: #282C33;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    color: #FFF;
+    font-family: Fira Code, serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 30px;
+    text-decoration: none;
+
+}
+
+.links a {
+    color: #FFF;
+    font-family: Fira Code, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+

@@ -1,0 +1,69 @@
+.intro {
+    display: flex;
+    padding-bottom: 25px;
+    align-items: center;
+    justify-content: space-around;
+}
+.intro-text {
+    width: 535px;
+    color: white;
+}
+.intro-text h6 {
+    color: #FFF;
+    font-family: Fira Code, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.logo-intro {
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+.img-intro {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+.intro-img {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px 30px;
+    width: 100%;
+    margin: auto;
+}
+.loading-text {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+}
+
+.projects-component h2 {
+    margin-left: 50px;
+    margin-top: 50px;
+    color: #FFF;
+    font-family: Fira Code, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+}
+.projects-component {
+    margin-top: 1px;
+    background-color: gray;
+}
+.home-title {
+    display: flex;
+    align-items: center;
+    height: auto;
+}

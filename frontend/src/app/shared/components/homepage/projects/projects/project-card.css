@@ -1,0 +1,34 @@
+.project-card {
+    width: 330px;
+    border: 1px solid white;
+}
+
+.project-img {
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.project-img img {
+    width: 300px;
+    height: 201px;
+    object-fit: contain;
+}
+
+.project-title {
+    color: #FFF;
+    font-family: Fira Code, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.project-desc {
+    color: #ABB2BF;
+    font-family: Fira Code, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -1,0 +1,14 @@
+.tag-form img {
+    width: 60px;
+}
+.tags-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.tag-form {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
