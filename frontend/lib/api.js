@@ -12,12 +12,22 @@ export async function fetchProjects() {
 }
 
 export async function fetchProjectBySlug(slug) {
-    try{
+    try {
         const res = await axios.get(`${API_URL}/api/projects?populate[media]=media&populate[tags][populate][logo]=tags&filters[slug][$eq]=${slug}`);
         return res.data.data;
-    }catch (e) {
+    } catch (e) {
         throw new Error(`Erreur lors de la récupération du projet ${slug} : ${e.message}`);
     }
+}
+
+export async function createContact(contact) {
+    try {
+        const res = await axios.post(`${API_URL}/api/contacts`, contact);
+        return res.data.data;
+    } catch (e) {
+        throw new Error(`Erreur lors de la récupération du projet ${slug} : ${e.message}`);
+    }
+
 }
 
 

@@ -37,6 +37,10 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "liltag": {
+      "type": "string",
+      "required": true
     }
   }
 }

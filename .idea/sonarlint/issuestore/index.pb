@@ -11,5 +11,11 @@ f
 6frontend/src/app/shared/components/loading/Loading.jsx,5\e\5ef2000891f4e9bbb4e44142a0073f1746fcfc52
 r
 Bfrontend/src/app/shared/components/homepage/projects/tags/tags.jsx,f\5\f52859012e0bd0ce7ffebed5d80fd3a36f65f1d8
-C
-frontend/lib/api.js,d\0\d02c9c15f17b905e1d04f6484cf404f8b082c585
+G
+frontend/next.config.js,7\4\7408706362fbef314d447491c9360ef11c3863ee
+B
+frontend/README.md,6\a\6a3a36e34dda2b89c027f00ac950371695b13c75
+G
+backend/config/admin.ts,4\c\4c5da0ae5e11a0c78b7ff829b5d4d58442077cbe
+E
+backend/config/api.ts,c\b\cba28123ef3493822ed75fbf8ca2ecb34213f09a

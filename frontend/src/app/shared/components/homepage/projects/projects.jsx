@@ -11,8 +11,6 @@ export function Projects() {
     useEffect(() => {
         const getData = async () => {
             try {
-                // Récupérer les projets avec les médias
-
                 const projectsData = await fetchProjects();
                 console.log("Projects data:", projectsData);
                 setProjects(projectsData);
@@ -21,16 +19,12 @@ export function Projects() {
                 console.error("Erreur lors de la récupération des projets ou des tags :", error);
             }
         };
-
         getData();
     }, []);
 
 
     return (
         <div className="projects-component">
-            <div className="home-title">
-                <h2>Projets</h2>
-            </div>
             <div className="project-grid">
                 {projects?.length > 0 ? (
                     projects.map((project) => (
@@ -38,8 +32,6 @@ export function Projects() {
                         <ProjectCard project={project}/>
                         </li>
                     ))
-
-
                 ) : (
                     <Loading/>
                 )}

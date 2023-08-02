@@ -1,15 +1,20 @@
 root {
     --font-color-grey : #ABB2BF;
 }
+*,h1,h2,h3,h4,h5,h6,p,a,button,span {
+    font-family: Montserrat, serif;
+}
 body {
-    max-width: 1440px;
+    max-width: 1366px;
     margin: auto;
-    max-height: 1080px;
     background: #282C33;
 }
-
+main {
+    width: 100%;
+    margin: auto;
+}
 .navbar {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -18,8 +23,7 @@ body {
 
 .navbar h1 {
     color: #FFF;
-    font-family: Fira Code, serif;
-    font-size: 35px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -30,10 +34,9 @@ body {
 
 .links a {
     color: #FFF;
-    font-family: Fira Code, serif;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     margin-right: 30px;
     text-decoration: none;

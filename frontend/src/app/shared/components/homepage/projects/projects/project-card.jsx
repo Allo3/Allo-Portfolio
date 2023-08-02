@@ -23,8 +23,11 @@ export function ProjectCard({project}) {
             </div>
             <div className="project-desc">
                 <p>{project.attributes.desc}</p>
-                <a href={'/projet/' + project.attributes.slug}>Détails</a>
+                <a href="">
+                    <button className="custom-btn btn-12"><span>Cliquez ici !</span><span>GitHub</span></button>
+                </a>
             </div>
+
         </div>
-    );
+);
 }
