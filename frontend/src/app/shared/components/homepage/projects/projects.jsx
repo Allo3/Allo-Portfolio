@@ -28,12 +28,14 @@ export function Projects() {
             <div className="project-grid">
                 {projects?.length > 0 ? (
                     projects.map((project) => (
-                        <li style={{listStyleType: "none"}} key={projects.id}>
+                        <div className={project.attributes.slug + " project-card"}>
                         <ProjectCard project={project}/>
-                        </li>
+                        </div>
                     ))
                 ) : (
+                    <div className="loading">
                     <Loading/>
+                    </div>
                 )}
             </div>
         </div>

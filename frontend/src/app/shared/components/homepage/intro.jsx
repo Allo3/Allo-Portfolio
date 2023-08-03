@@ -9,8 +9,7 @@ export function Intro() {
             </div>
 
             <div className="intro-img">
-                <img className="img-intro" src="testimg.png" alt="test"/>
-                <img className="logo-intro" src="logotest.png" alt="etstpng"/>
+                <img className="img-intro" src="screenshot.png" alt="test"/>
             </div>
         </div>
     )

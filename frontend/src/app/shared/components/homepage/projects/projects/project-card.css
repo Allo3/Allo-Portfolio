@@ -1,5 +1,5 @@
 .project-card {
-    width: 330px;
+    width:  80%;
     border: 1px solid white;
     background: white;
     border-radius: 10px;
@@ -8,14 +8,18 @@
 }
 
 .project-img {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     text-align: center;
 }
 
 .project-img img {
-    width: 300px;
-    height: 201px;
+    width: 80%;
+    height: 150px;
     object-fit: contain;
+    transition: all .2s ease-in-out;
+}
+.project-img img:hover {
+    transform: scale(1.1) translate(0, -10px);
 }
 
 .project-title {
@@ -33,7 +37,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    width: 70%;
+    margin: auto;
+    height: auto;
 }
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,6 +49,11 @@
     gap: 20px 30px;
     width: 100%;
     margin: auto;
+    grid-template-areas:
+    ". loading .";
+}
+.loading {
+    grid-area: loading;
 }
 
 .custom-btn {
@@ -119,3 +132,40 @@
     -moz-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
 }
+@media screen and (max-width: 1240px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        ". ."
+        "mon-vieux-grimoire mon-vieux-grimoire";
+    }
+    .mon-vieux-grimoire {
+        grid-area: mon-vieux-grimoire;
+    }
+    .mon-vieux-grimoire .tags-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "."
+        "loading"
+        "mon-vieux-grimoire";
+    }
+    .mon-vieux-grimoire {
+        grid-area: mon-vieux-grimoire;
+    }
+    .tags-container {
+        justify-content: center;
+    }
+    .project-card {
+        width: 90%;
+    }
+}
+
+
