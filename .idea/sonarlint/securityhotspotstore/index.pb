@@ -1,14 +1,10 @@
 
-F
-frontend/jsconfig.json,a\c\ac675aaf5de0609824f67f03328e4e3cd72ad502
 E
 backend/tsconfig.json,2\d\2de55f36b9608859c02740cfa56b943f6eff3a73
 L
 backend/.strapi-updater.json,9\d\9d548f4ce981de0c298ae15a5f8b4490d66c1b00
 <
 backend/.env,f\3\f30451335edfb80e231f658d0defc83bb7e4c3a7
-G
-frontend/next.config.js,7\4\7408706362fbef314d447491c9360ef11c3863ee
 B
 frontend/README.md,6\a\6a3a36e34dda2b89c027f00ac950371695b13c75
 G
@@ -31,13 +27,11 @@ H
 frontend/public/mail.svg,8\6\866014733ffb8d20a603d8d2db3363578f1f61f3
 \
 ,frontend/public/map-marker-4-svgrepo-com.svg,c\f\cf39d3ab71742a88cf09a6eb561433fad5db05ac
-M
-backend/config/middlewares.ts,3\9\39bb96eae8ccc04b957fbe27b4ae7c08c2198bc1
 H
 backend/config/server.ts,8\2\829add70615cf0a31590bfb5b2045966f2358119
-r
-Bfrontend/src/app/shared/components/homepage/projects/tags/tags.jsx,f\5\f52859012e0bd0ce7ffebed5d80fd3a36f65f1d8
-=
-frontend/.env,e\5\e51ccb9a6155f3c59685c017c8fce22c869af68e
-C
-frontend/lib/api.js,d\0\d02c9c15f17b905e1d04f6484cf404f8b082c585
+f
+6frontend/src/app/shared/components/loading/Loading.jsx,5\e\5ef2000891f4e9bbb4e44142a0073f1746fcfc52
+f
+6frontend/src/app/shared/components/loading/loading.css,3\d\3de99ea20d87b6cd4720d1df47cf82b2333e3019
+S
+#frontend/public/icons8-linkedin.svg,8\f\8f26bcd13d2e07dba4750904cda2da08ce01b40f

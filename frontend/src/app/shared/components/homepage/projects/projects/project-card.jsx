@@ -1,5 +1,7 @@
 // projects/project-card.jsx
 import {Tags} from "@/app/shared/components/homepage/projects/tags/tags";
+import Image from "next/image";
+
 
 import "./project-card.css";
 
@@ -7,8 +9,8 @@ export function ProjectCard({project}) {
     return (
         <div key={project.id}>
             <div className="project-img">
-                <a href={"https://github.com/Allo3/" + project.attributes.slug} target="_blank">
-                    <img
+                <a href={'/project/' + project.attributes.slug} target="_blank">
+                    <Image
                         src={process.env.NEXT_PUBLIC_STRAPI_STATIC_FILE + project.attributes.media.data.attributes.url}
                         alt="asdf"
                     />

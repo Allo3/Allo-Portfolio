@@ -27,8 +27,8 @@ export function Projects() {
         <div className="projects-component">
             <div className="project-grid">
                 {projects?.length > 0 ? (
-                    projects.map((project) => (
-                        <div className={project.attributes.slug + " project-card"}>
+                    projects.map((project)  => (
+                        <div className={project.attributes.slug + " project-card"} key={project.id}>
                         <ProjectCard project={project}/>
                         </div>
                     ))
