@@ -4,17 +4,22 @@ import Image from "next/image";
 
 
 import "./project-card.css";
+import Link from "next/link";
 
 export function ProjectCard({project}) {
+    console.log("process.env.NEXT_PUBLIC_ENVIRONMENT", process.env.NEXT_PUBLIC_ENVIRONMENT);
+    console.log("project.attributes.media.data.attributes.url", project.attributes.media.data.attributes.url);
+    console.log("project.attributes.media.data.attributes.name", project.attributes.media.data.attributes.name);
     return (
         <div key={project.id}>
             <div className="project-img">
-                <a href={'/project/' + project.attributes.slug} target="_blank">
-                    <Image
-                        src={process.env.NEXT_PUBLIC_STRAPI_STATIC_FILE + project.attributes.media.data.attributes.url}
-                        alt="asdf"
+                <Link href={'/project/' + project.attributes.slug} as="/project">
+                    <Image width={500} height={500}
+                        src={project.attributes.media.data.attributes.url}
+                        alt={project.attributes.media.data.attributes.name}
+                        loader={({src}) => src}
                     />
-                </a>
+                </Link>
             </div>
             <Tags
                 tags={project.attributes.tags}

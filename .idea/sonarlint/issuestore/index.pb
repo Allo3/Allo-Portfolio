@@ -39,12 +39,8 @@ r
 Bfrontend/src/app/shared/components/homepage/projects/tags/tags.css,f\d\fda4c9cb3757b61b050596fc6054a5874ca60b0f
 D
 backend/package.json,2\d\2d67691333633e849af94af966942f0c1b3151c6
-G
-frontend/next.config.js,7\4\7408706362fbef314d447491c9360ef11c3863ee
 F
 frontend/jsconfig.json,a\c\ac675aaf5de0609824f67f03328e4e3cd72ad502
-E
-frontend/package.json,3\7\37083060967a471c011a16651e22bdc2ade41759
 I
 backend/config/plugins.ts,e\4\e4bb67a66471c06932359c3da33dafd451a4a0ea
 M

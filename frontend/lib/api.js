@@ -5,7 +5,7 @@ const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
 
 export async function fetchProjects() {
     try {
-        const response = await axios.get(`${API_URL}/projects?populate[media]=media&populate[screenMedia]=screenMedia&populate[tags][populate][logo]=tags`);
+        const response = await axios.get(`${API_URL}/projects?populate[media]=media&populate[tags][populate][logo]=tags`);
         return response.data.data;
     } catch (error) {
         throw new Error("Erreur lors de la récupération des projets :", error);

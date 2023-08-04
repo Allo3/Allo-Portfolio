@@ -17,8 +17,8 @@ export function Tags({tags}) {
                                     "//www.google.com/search?q=" + tag.attributes.name
                                 )
                                 }>
-                                    <Image
-                                        src={process.env.NEXT_PUBLIC_STRAPI_STATIC_FILE + tag.attributes.logo.data.attributes.url}
+                                    <Image width={40} height={40}
+                                        src={tag.attributes.logo.data.attributes.url}
                                         alt={tag.attributes.slug}
                                     />
                                 </a>

@@ -9,6 +9,14 @@ import ReactMarkdown from "react-markdown";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {vscDarkPlus} from "react-syntax-highlighter/dist/esm/styles/prism";
 
+
+export async function generateStaticParams() {
+    const posts = await fetchProjectBySlug().then((res) => res.json())
+
+    return posts.map((post) => ({
+        slug: post.slug,
+    }))
+}
 function splitCodeAndText(content) {
     const codeRegex = /```([\w-]+)?\n([\s\S]*?)\n```/g;
     let lastIndex = 0;
@@ -61,19 +69,22 @@ export default function Page({params}) {
     const contentBlocks = project ? splitCodeAndText(project.attributes.info) : [];
 
     return (<>
-            <>
-                {project ? (<div className="info-logo">
-                        <div className="infos-desc">
-                            {contentBlocks.map((block, index) => block.type === "code" ? (
-                                <SyntaxHighlighter key={index} language={block.language} style={vscDarkPlus}>
-                                    {block.content}
-                                </SyntaxHighlighter>) : (<ReactMarkdown className="infos-container" key={index} remarkPlugins={[remarkGfm]}>
-                                    {block.content}
-                                </ReactMarkdown>))}
-                                <Image src={process.env.NEXT_PUBLIC_STRAPI_STATIC_FILE + project.attributes.screenMedia.data.attributes.url}
-                                     alt={project.attributes.title}/>
-                        </div>
-                    </div>) : (<Loading/>)}
-            </>
-        </>);
+        <>
+            {project ? (<div className="info-logo">
+                <div className="infos-desc">
+                    {contentBlocks.map((block, index) => block.type === "code" ? (
+                        <SyntaxHighlighter key={index} language={block.language} style={vscDarkPlus}>
+                            {block.content}
+                        </SyntaxHighlighter>) : (
+                        <ReactMarkdown className="infos-container" key={index} remarkPlugins={[remarkGfm]}>
+                            {block.content}
+                        </ReactMarkdown>))}
+                    <Image src={project.attributes.screenMedia.data.attributes.url}
+                           alt={project.attributes.title}
+                           loader={({src}) => src}
+                    />
+                </div>
+            </div>) : (<Loading/>)}
+        </>
+    </>);
 }
