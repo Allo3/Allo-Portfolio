@@ -44,6 +44,14 @@
     },
     "info": {
       "type": "richtext"
+    },
+    "screenMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

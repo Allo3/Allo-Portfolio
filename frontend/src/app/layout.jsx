@@ -8,7 +8,7 @@ export default function RootLayout({children}) {
             <body>
                 <header>    
                     <nav className="navbar">
-                        <h1>Portfolio</h1>
+                        <h1><a href="/">Portfolio</a></h1>
                             <div className="links">
                                 <Link href="/#contact">Contact</Link>
                             </div>

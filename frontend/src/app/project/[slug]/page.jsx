@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState} from "react";
 import Image from "next/image";
+import "./project-page.css";
 import {fetchProjectBySlug} from "../../../../lib/api";
 import {Loading} from "@/app/shared/components/loading/Loading";
 import remarkGfm from "remark-gfm";
@@ -59,32 +60,20 @@ export default function Page({params}) {
 
     const contentBlocks = project ? splitCodeAndText(project.attributes.info) : [];
 
-    return (
-        <>
+    return (<>
             <>
-                {project ? (
-                    <div className="info-logo">
-                        <Image
-                            src={process.env.NEXT_PUBLIC_STRAPI_STATIC_FILE + project.attributes.media.data.attributes.url}
-                            alt={project.attributes.title}/>
+                {project ? (<div className="info-logo">
                         <div className="infos-desc">
-                            {contentBlocks.map((block, index) =>
-                                block.type === "code" ? (
-                                    <SyntaxHighlighter key={index} language={block.language} style={vscDarkPlus}>
-                                        {block.content}
-                                    </SyntaxHighlighter>
-                                ) : (
-                                    <ReactMarkdown key={index} remarkPlugins={[remarkGfm]}>
-                                        {block.content}
-                                    </ReactMarkdown>
-                                )
-                            )}
+                            {contentBlocks.map((block, index) => block.type === "code" ? (
+                                <SyntaxHighlighter key={index} language={block.language} style={vscDarkPlus}>
+                                    {block.content}
+                                </SyntaxHighlighter>) : (<ReactMarkdown className="infos-container" key={index} remarkPlugins={[remarkGfm]}>
+                                    {block.content}
+                                </ReactMarkdown>))}
+                                <Image src={process.env.NEXT_PUBLIC_STRAPI_STATIC_FILE + project.attributes.screenMedia.data.attributes.url}
+                                     alt={project.attributes.title}/>
                         </div>
-                    </div>
-                ) : (
-                    <Loading/>
-                )}
+                    </div>) : (<Loading/>)}
             </>
-        </>
-    );
+        </>);
 }

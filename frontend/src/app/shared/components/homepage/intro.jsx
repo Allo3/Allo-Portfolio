@@ -11,7 +11,7 @@ export function Intro() {
             </div>
 
             <div className="intro-img">
-                <Image className="img-intro" src="/screenshot.png" alt="test"/>
+                <Image width={720} height={257} unoptimized={true} className="img-intro" src="/screenshot.png" alt="test"/>
             </div>
         </div>
     )

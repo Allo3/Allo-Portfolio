@@ -79,6 +79,7 @@
     left: 30px;
     border-radius: 35px;
     border: 1px solid #C778DD;
+
 }
 
 
@@ -288,6 +289,9 @@ textarea {
     .contact-container {
         width: 100%;
     }
+    .intro-img {
+        display: none;
+    }
     .contact-infos {
         top: 0;
         display: grid;
@@ -337,7 +341,5 @@ textarea {
     }
 }
 @media screen and (max-width: 490px) {
-    .intro-img {
-        display: none;
-    }
+
 }

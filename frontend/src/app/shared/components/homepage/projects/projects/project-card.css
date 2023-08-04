@@ -31,7 +31,8 @@
     margin-left: 10px;
 }
 
-.project-desc {
+.project-desc p {
+    padding-top: 10px;
     color: #282C33;
     font-size: 16px;
     font-style: normal;
@@ -55,7 +56,12 @@
 .loading {
     grid-area: loading;
 }
-
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
 .custom-btn {
     display: flex;
     align-items: center;

@@ -21,11 +21,18 @@ export function ProjectCard({project}) {
             />
             <div className="project-desc">
                 <p>{project.attributes.desc}</p>
+                <div className="buttons-container">
+                    <a href={'/project/' + project.attributes.slug} target="_blank">
+                        <button className="custom-btn btn-12"><span>Cliquez ici !</span><span>Détaills</span>
+                        </button>
+                    </a>
                 <a href={"https://github.com/Allo3/" + project.attributes.slug} target="_blank">
                     <button className="custom-btn btn-12"><span>Cliquez ici !</span><span>GitHub</span></button>
                 </a>
             </div>
-
         </div>
-    );
+
+</div>
+)
+    ;
 }

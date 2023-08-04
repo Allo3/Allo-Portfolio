@@ -18,6 +18,10 @@ main {
     text-align: center;
     margin: auto auto 40px;
 }
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
 header svg {
     display: flex;
     margin: auto auto 20px;
